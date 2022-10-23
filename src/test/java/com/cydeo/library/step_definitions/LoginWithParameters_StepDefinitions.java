@@ -91,4 +91,12 @@ public class LoginWithParameters_StepDefinitions {
         Assert.assertEquals(numberOfUsers, actualResult);
 
     }
+
+    @Then("librarian should be able to access dashboard {string}")
+    public void librarianShouldBeAbleToAccessDashboard(String accountName) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+        wait.until(ExpectedConditions.visibilityOf(dashboardPage.accountName));
+
+        Assert.assertEquals(accountName, dashboardPage.accountName.getText());
+    }
 }

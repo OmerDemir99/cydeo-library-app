@@ -18,7 +18,7 @@ public class DashboardPage {
     @FindBy(className = "dropdown-item")
     public WebElement logoutButton;
 
-    @FindBy(xpath = "//h2[.='1239']")
+    @FindBy(xpath = "//h2[.='1245']")
     public WebElement userCount;
 
     @FindBy(id = "book_count")
@@ -32,6 +32,11 @@ public class DashboardPage {
 
     @FindBy(xpath = "//span[.='Dashboard']")
     public WebElement dashboardLink;
+
+   @FindBy(xpath = "//a/img/following-sibling::span")
+   public WebElement accountName;
+    //@FindBy(xpath = "//a[@id='navbarDropdown']/span")
+
 
 
 }

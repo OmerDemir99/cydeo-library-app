@@ -68,7 +68,10 @@ public class Login_StepDefinitions {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         wait.until(ExpectedConditions.urlContains("dashboard"));
 
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("dashboard"));
+        //Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("dashboard"));
+
+        String expectedResult = "Test Librarian 10";
+        Assert.assertEquals(expectedResult, dashboardPage.accountName.getText());
     }
 
 

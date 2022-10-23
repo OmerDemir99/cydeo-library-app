@@ -31,6 +31,5 @@ Feature: Login feature
   # Librarian
    Scenario: User should be able to login with valid credentials as a librarian
       When librarian enter username "librarian13@library" and enter password "YCJCbmU3"
-      And librarian click sign in button
-      Then librarian should be able see "1239" users
+      Then librarian should be able see "1245" users
 

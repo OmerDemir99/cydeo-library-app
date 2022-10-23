@@ -26,12 +26,12 @@ Feature: Login feature
     When librarian enter username "<username>"
     And librarian enter password "<password>"
     And librarian click sign in button
-    Then librarian should be able to access dashboard
+    Then librarian should be able to access dashboard "<account name>"
 
     Examples: Valid credentials for librarian user
-      | username            | password |
-      | librarian30@library | oZzv4ePp |
-      | librarian32@library | 72kOI6Zl |
-      | librarian34@library | n3jnk5Rd |
-      | librarian36@library | tXH2IlVj |
-      | librarian38@library | 6TN8WpcY |
+      | username            | password | account name      |
+      | librarian30@library | oZzv4ePp | Test Librarian 30 |
+      | librarian32@library | 72kOI6Zl | Test Librarian 32 |
+      | librarian34@library | n3jnk5Rd | Test Librarian 34 |
+      | librarian36@library | tXH2IlVj | Test Librarian 36 |
+      | librarian38@library | 6TN8WpcY | Test Librarian 38 |
